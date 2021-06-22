@@ -85,8 +85,8 @@ const createSpotify = (email, password) => new Promise((resolve, reject) => {
 
         while (true) {
 
-            var email = `${randStr(10)}@gmailup.com`; // ganti domain ? bebas
-            var password = 'default123'; // ganti password disini
+            var email = `${randStr(10)}@gmailup.com`; // change domain here
+            var password = 'default123'; // change password here
 
             const resultCreateSpotify = await createSpotify(email, password);
             const username = resultCreateSpotify.username;
