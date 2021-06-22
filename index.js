@@ -71,12 +71,12 @@ const createSpotify = (email, password) => new Promise((resolve, reject) => {
         const token = resultCreateSpotify.login_token;
 
         if (username && token) {
-            console.log(chalk.green(`\nBerhasil Register | ${email} | ${password}`));
+            console.log(chalk.green(`\nSuccess Register | ${email} | ${password}`));
             fs.appendFileSync('result.txt', `${email} | ${password}\n`);
             fs.appendFileSync('token.txt', `${token}\n`)
         } else if (!username && !token) {
             const errorMsgCreate = resultCreateSpotify.errors.email;
-            console.log(chalk.red(`Gagal Register | ${errorMsgCreate}`));
+            console.log(chalk.red(`Failed to Register | ${errorMsgCreate}`));
         } else {
             console.log(chalk.red('Unknown Error !'));
         }
@@ -93,12 +93,12 @@ const createSpotify = (email, password) => new Promise((resolve, reject) => {
             const token = resultCreateSpotify.login_token;
             
             if (username && token) {
-                console.log(chalk.green(`Berhasil Register | ${email} | ${password}`));
+                console.log(chalk.green(`Success Register | ${email} | ${password}`));
                 fs.appendFileSync('result.txt', `${email} | ${password}\n`);
                 fs.appendFileSync('token.txt', `${token}\n`)
             } else if (!username && !token) {
                 const errorMsgCreate = resultCreateSpotify.errors.email;
-                console.log(chalk.red(`Gagal Register | ${errorMsgCreate}`));
+                console.log(chalk.red(`Failed to Register | ${errorMsgCreate}`));
             } else {
                 console.log(chalk.red('Unknown Error !'));
             }
@@ -106,7 +106,7 @@ const createSpotify = (email, password) => new Promise((resolve, reject) => {
 
         
     } else {
-        console.log('Masukkan sesuai nomor yg tersedia');
+        console.log('Choose 1 or 2 !');
     }
         
     } catch (e) {
