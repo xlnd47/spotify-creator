@@ -78,7 +78,7 @@ const createSpotify = (email, password) => new Promise((resolve, reject) => {
             const errorMsgCreate = resultCreateSpotify.errors.email;
             console.log(chalk.red(`Failed to Register | ${errorMsgCreate}`));
         } else {
-            console.log(chalk.red('Unknown Error !'));
+            console.log(chalk.yellow('Unknown Error !'));
         }
 
     } else if (toolsNumb == '2') {
@@ -100,7 +100,7 @@ const createSpotify = (email, password) => new Promise((resolve, reject) => {
                 const errorMsgCreate = resultCreateSpotify.errors.email;
                 console.log(chalk.red(`Failed to Register | ${errorMsgCreate}`));
             } else {
-                console.log(chalk.red('Unknown Error !'));
+                console.log(chalk.yellow('Unknown Error !'));
             }
         }
 
